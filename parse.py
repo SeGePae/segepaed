@@ -21,11 +21,12 @@ def write_bibtex(entry):
 
 csv = {}
 with open('data/laufnummern.tsv') as f:
-    for line in f:
-        tmp = line.split('\t')
-        key = tmp[3]
-        kat = tmp[8]
-        csv[key] = kat
+    for i, line in enumerate(f):
+        if i > 0:
+            tmp = line.split('\t')
+            key = tmp[3]
+            kat = tmp[5]
+            csv[key] = kat
 
 _kw = {'en': {}, 'de': {}}
 with open('data/keywords.tsv') as f:
@@ -42,6 +43,7 @@ with open('data/keywords.tsv') as f:
 translator = {}
 coocs = defaultdict(lambda : defaultdict(list))
 kws = defaultdict(list)
+all_keywords = defaultdict(int)
 for key in bib:
     jsn[key] = {}
     jsn[key]['author'] = bib[key]['author_str'] or bib[key]['editor_str']
@@ -68,6 +70,7 @@ for key in bib:
 
     keywords_, keywords, keywordsen = bib[key]['keywords'].split(';'), [], []
     for k in keywords_:
+        all_keywords[k] += 1
         if ' // ' in k:
             keywords += [k.split(' // ')[0]]
             keywordsen += [k.split(' // ')[1]]
@@ -114,14 +117,14 @@ with open('segepaed/keywords.json', 'w') as f:
         keys += [{"id": i+1, "name": k, "value": k}]
     f.write(json.dumps(keys))
 
-#with open('data/keywords.tsv', 'w') as f:
-#    f.write('KeywordDE\tKeywordEN\tOccurrence\n')
-#    for k, fr in sorted(all_keywords.items(), key=lambda x: x[1], reverse=True):
-#        if ' // ' in k:
-#            kd, ke = k.split(' // ')
-#        else:
-#            kd, ke = k, ''
-#        f.write(kd+'\t'+ke+'\t'+str(fr)+'\n')
+with open('data/keywords-n.tsv', 'w') as f:
+    f.write('KeywordDE\tKeywordEN\tOccurrence\n')
+    for k, fr in sorted(all_keywords.items(), key=lambda x: x[1], reverse=True):
+        if ' // ' in k:
+            kd, ke = k.split(' // ')
+        else:
+            kd, ke = k, ''
+        f.write(kd+'\t'+ke+'\t'+str(fr)+'\n')
 queue = sorted([n for n in categories.nodes() if len(n.split('.')) == 1])
 text = ''
 previous = 1
