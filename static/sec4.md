@@ -2,6 +2,7 @@
 
 In Ergänzung zur Online-Version ist diese Bibliographie auch in elektronischen Dokumenten verfügbar:
 
+<p style="background-color:LightYellow;padding:10px;border-radius:25px;">Fixemer, Tom; List, Inga Marie; Henningsen, Anja (2021): <b>Literatur-Monitoring zum deutschsprachigen Forschungsstand "Sexualisierte Gewalt gegen Kinder und Jugendliche in pädagogischen Kontexten".</b> Bibliographie, Nummer 3. Online verfügbar unter: <a href="https://hcommons.org/docs/literatur-monitoring-zum-deutschsprachigen-forschungsstand-sexualisierte-gewalt-gegen-kinder-und-jugendliche-in-padagogischen-kontexten-bibliographie-3/">https://hcommons.org/docs/literatur-monitoring-zum-deutschsprachigen-forschungsstand-sexualisierte-gewalt-gegen-kinder-und-jugendliche-in-padagogischen-kontexten-bibliographie-3/</a>. Kiel: Fachhochschule Kiel.</p>
 
 <p style="background-color:LightYellow;padding:10px;border-radius:25px;">Fixemer, Tom; List, Inga Marie; Henningsen, Anja (2021): <b>Literatur-Monitoring zum deutschsprachigen Forschungsstand "Sexualisierte Gewalt gegen Kinder und Jugendliche in pädagogischen Kontexten".</b> Bibliographie, Nummer 2. Online verfügbar unter: <a href="https://hcommons.org/docs/bibliographie-2-sexualisierte-gewalt-in-paedagogischen-kontexten/">https://hcommons.org/docs/bibliographie-2-sexualisierte-gewalt-in-paedagogischen-kontexten/</a>. Kiel: Fachhochschule Kiel.</p>
 
