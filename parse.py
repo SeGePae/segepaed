@@ -25,7 +25,7 @@ with open('data/laufnummern.tsv') as f:
         if i > 0:
             tmp = line.split('\t')
             key = tmp[3]
-            kat = tmp[5]
+            kat = tmp[7]
             csv[key] = kat
 
 _kw = {'en': {}, 'de': {}}
